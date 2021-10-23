@@ -10,18 +10,6 @@ documentclass: book
 github-repo: rstudio/bookdown-demo
 site: bookdown::bookdown_site
 ---
---- 
-title: "Basic Statistical Methods for Public Health"
-author: "Guy Mizrachi"
-date: "`r Sys.Date()`"
-output:
-  html_document:
-    df_print: paged
-  pdf_document: default
-documentclass: book
-github-repo: rstudio/bookdown-demo
-site: bookdown::bookdown_site
----
 
 ```{r, eval=FALSE}
 bookdown::render_book("index.Rmd", new_session = TRUE, output_format = "HTML")
@@ -100,38 +88,14 @@ This is a good example of the importance of controlled experiments - factors lik
 
 <!--chapter:end:04-Set-A-Q4.Rmd-->
 
+
 # Set A Question 7
-(page 22)
+
+Placeholder
+
 
 ## Question 
-
-"In a clinical trial, data collection usually starts at 'baseline', when the subjects are recruited into the trial but before they are assigned to treatment or control. Data collection continues until the end of followup. Two clinical trials on prevention of heart attacks report baseline data on smoking, shown below. In one of these trials, the randomization did not work. Which one, and why? "
-
 ## Answer
-
-Let's see the data first:
-
-```{r echo=FALSE, warning=FALSE}
-library(knitr)
-
-clinical_1 <- matrix(c(1012,'49.3%',997,'69%'), nrow = 2) 
-clinical_1 <- as.table(clinical_1)
-colnames(clinical_1) <-c("Treatment","Control")
-rownames(clinical_1) <- c("Number of people","Percent who smoked")
-
-clinical_2 <- matrix(c(995,'59.3%',1017,'59%'),nrow = 2)
-clinical_2 <- as.table(clinical_2)
-colnames(clinical_2) <-c("Treatment","Control")
-rownames(clinical_2) <- c("Number of people","Percent who smoked")
-
-print(clinical_1)
-
-print(clinical_2)
-```
-As said in the question - the data should show an equal amount of smokers in each group (treatment and control), in order to have an un-biased experiment. 
-As we can see in the **second** trial - the percent of smokers in each group is similar (59.3% in the treatment group, 59.3% in the control group), but in the **first** trial - there are more smokers (69%) in the control group than in the treatment group (49.3%).
-
-The difference in the first trial can cause a bias - smoking might have an effect on the reaction to the treatment or general condition. A good randomization process will result in groups with similar rates of smokers (like the second trial), but the randomization process of the first trial did not work properly and produced a higher rate of smokers in the control group. 
 
 <!--chapter:end:05-Set-A-Q7.Rmd-->
 

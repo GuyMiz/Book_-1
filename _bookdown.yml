@@ -1,5 +1,8 @@
 delete_merged_file: false
 output_dir: "docs"
+sharing: 
+  facebook: false
+  twitter: false
 language:
   ui:
     chapter_name: ""
