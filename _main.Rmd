@@ -55,48 +55,14 @@ Guy.
 
 <!--chapter:end:01-Introduction.rmd-->
 
+
 # Set A question 1 
-(Page 20)
+
+Placeholder
+
 
 ## Question
-
-"In the U.S In 2000, there were 2.4 million deaths from all causes, compared to 1.9 million in 1970 - a 25% increase. 
-True or false, and explain: the data show that the public's health got worse over the period 1970-2000."
-
 ## Answer
-
-**FALSE**
-
-Explain: Although the data points towards an overall increase in deaths,
-it fails to show weather the public's health got worse over that time period. 
-
-An absolute growth (from 1.9 million to 2.4 million) does not suggest **a relative growth**.
-It is safe to assume that the population got bigger as well, which can explain the increase in
-absolute number of deaths.
-
-Let's look at an example of relative and absolute numbers (the population number is just for example):
-
-```{r, echo=FALSE} 
-year_1970 <- c(1.9, 205.1)
-year_2000 <- c(2.4, 282.2)
-years <- c(year_1970,year_2000)
-deaths <- barplot(years, main="Deaths in the U.S",
-  ylab = "Million people", col=c("#8080ff","#ff8080"), names.arg = c('Deaths - 1970','Population - 1970','Deaths - 2000','Population-2000'))
-```
-
-As we can see, although the absolute number of deaths shows an increase of 25%, the relative deaths per population shows a decrease, which contradicts the conclusion that the public's health has got worse.
-
-Let's look at the relative numbers:
-
-```{r, echo=FALSE}
-year_1970_r <- 1.9/205.1
-year_2000_r <- 2.4/282.2
-years_r <- c(year_1970_r,year_2000_r)
-deaths <- barplot(years_r, main="Deaths in the U.S (percentage of population)",
-  ylab = "Deaths/Population", col=c("#8080ff"), names.arg = c('1970','2000'), width = c(5,5), space = 1)
-
-```
-
 
 <!--chapter:end:02-Set-A-Q1.Rmd-->
 
@@ -134,14 +100,38 @@ This is a good example of the importance of controlled experiments - factors lik
 
 <!--chapter:end:04-Set-A-Q4.Rmd-->
 
-
 # Set A Question 7
-
-Placeholder
-
+(page 22)
 
 ## Question 
+
+"In a clinical trial, data collection usually starts at 'baseline', when the subjects are recruited into the trial but before they are assigned to treatment or control. Data collection continues until the end of followup. Two clinical trials on prevention of heart attacks report baseline data on smoking, shown below. In one of these trials, the randomization did not work. Which one, and why? "
+
 ## Answer
+
+Let's see the data first:
+
+```{r echo=FALSE, warning=FALSE}
+library(knitr)
+
+clinical_1 <- matrix(c(1012,'49.3%',997,'69%'), nrow = 2) 
+clinical_1 <- as.table(clinical_1)
+colnames(clinical_1) <-c("Treatment","Control")
+rownames(clinical_1) <- c("Number of people","Percent who smoked")
+
+clinical_2 <- matrix(c(995,'59.3%',1017,'59%'),nrow = 2)
+clinical_2 <- as.table(clinical_2)
+colnames(clinical_2) <-c("Treatment","Control")
+rownames(clinical_2) <- c("Number of people","Percent who smoked")
+
+print(clinical_1)
+
+print(clinical_2)
+```
+As said in the question - the data should show an equal amount of smokers in each group (treatment and control), in order to have an un-biased experiment. 
+As we can see in the **second** trial - the percent of smokers in each group is similar (59.3% in the treatment group, 59.3% in the control group), but in the **first** trial - there are more smokers (69%) in the control group than in the treatment group (49.3%).
+
+The difference in the first trial can cause a bias - smoking might have an effect on the reaction to the treatment or general condition. A good randomization process will result in groups with similar rates of smokers (like the second trial), but the randomization process of the first trial did not work properly and produced a higher rate of smokers in the control group. 
 
 <!--chapter:end:05-Set-A-Q7.Rmd-->
 
