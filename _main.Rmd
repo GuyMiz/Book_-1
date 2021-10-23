@@ -55,14 +55,48 @@ Guy.
 
 <!--chapter:end:01-Introduction.rmd-->
 
-
 # Set A question 1 
-
-Placeholder
-
+(Page 20)
 
 ## Question
+
+"In the U.S In 2000, there were 2.4 million deaths from all causes, compared to 1.9 million in 1970 - a 25% increase. 
+True or false, and explain: the data show that the public's health got worse over the period 1970-2000."
+
 ## Answer
+
+**FALSE**
+
+Explain: Although the data points towards an overall increase in deaths,
+it fails to show weather the public's health got worse over that time period. 
+
+An absolute growth (from 1.9 million to 2.4 million) does not suggest **a relative growth**.
+It is safe to assume that the population got bigger as well, which can explain the increase in
+absolute number of deaths.
+
+Let's look at an example of relative and absolute numbers (the population number is just for example):
+
+```{r, echo=FALSE} 
+year_1970 <- c(1.9, 205.1)
+year_2000 <- c(2.4, 282.2)
+years <- c(year_1970,year_2000)
+deaths <- barplot(years, main="Deaths in the U.S",
+  ylab = "Million people", col=c("#8080ff","#ff8080"), names.arg = c('Deaths - 1970','Population - 1970','Deaths - 2000','Population-2000'))
+```
+
+As we can see, although the absolute number of deaths shows an increase of 25%, the relative deaths per population shows a decrease, which contradicts the conclusion that the public's health has got worse.
+
+Let's look at the relative numbers:
+
+```{r, echo=FALSE}
+year_1970_r <- 1.9/205.1
+year_2000_r <- 2.4/282.2
+years_r <- c(year_1970_r,year_2000_r)
+deaths <- barplot(years_r, main="Deaths in the U.S (percentage of population)",
+  ylab = "Deaths/Population", col=c("#8080ff"), names.arg = c('1970','2000'), width = c(5,5), space = 1)
+
+```
+
 
 <!--chapter:end:02-Set-A-Q1.Rmd-->
 
@@ -144,48 +178,14 @@ Women who exercise regularly may not have had any spontaneous abortion in the pa
 
 <!--chapter:end:07-Set-A-Q12.Rmd-->
 
+
 # Set A question 13 
-(Page 24)
+
+Placeholder
+
 
 ## Question
-
-"A hypothetical university has two departments, A and B. There are 2,000 male applicants, of whom half apply to each department. There are 1,100 female applicants: 100 apply to department A and 1,000 to department B. Department A admits 60% of the men who apply and 60% of the women. Department B admits 30% of the men who apply and 30% of the women.' For each department, the percentage of men admitted equals the percentage of women admitted; this must be so for both departments together.' True or false, and explain briefly"
-
 ## Answer
-
-**FALSE**
-
-Let's check how many men and women were admitted:
-
-```{r, echo=FALSE}
-
-men <- c(1000,1000)
-women <- c(100,1000)
-
-dep <- c(0.6,0.3)
-
-men_addmited <- (men*dep)
-women_addmited <- (women*dep)
-addmited <- c(men_addmited, women_addmited)
-
-addmited <- matrix(addmited, nrow = 2)
-x <- c(sum(addmited[1,]), sum(addmited[2,]))
-
-b <- barplot(addmited, col = c('#3377ff','#80ffcc'), ylab = "People admitted", names.arg = c("Men", "Women"), ylim = c(0,1000), main = "Men and Women admitted by departments", legend = c("Dep A", "Dep B")) 
-
-
-```
-
-We can see that more men were admitted than women, but let's compare the admission percent (divide by number of men or women):
-
-
-```{r, echo=FALSE}
-addmited_percent <- c((sum(men_addmited)/2000),(sum(women_addmited)/1100))
-b <- barplot(addmited_percent, col = c('#80bfff'), ylab = "Percent admited", names.arg = c("Men", "Women"), main = "Percentage admitted", legend = c("Overall"))
-
-```
-
-Although each department accepted the same percent, with no regard to men/women applicants, higher percentage of men were admitted due to the higher applications for department A (50% of men) comparing to the women's. Department A's admission chances were higher (60%) than department B's, so a higher percentage of men were admitted. 
 
 <!--chapter:end:08-Set-A-Q13.Rmd-->
 
