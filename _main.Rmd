@@ -3,16 +3,16 @@ title: "Basic Statistical Methods for Public Health"
 author: "Guy Mizrachi"
 date: "`r Sys.Date()`"
 output:
-  pdf_document: default
   html_document:
     df_print: paged
+  pdf_document: default
 documentclass: book
 github-repo: rstudio/bookdown-demo
 site: bookdown::bookdown_site
 ---
 
 ```{r, eval=FALSE}
-bookdown::render_book(new_session = TRUE, output_format = "HTML")
+bookdown::render_book("index.Rmd", new_session = TRUE, output_format = "HTML")
 ```
 
 
