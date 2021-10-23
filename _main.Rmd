@@ -1,0 +1,181 @@
+--- 
+title: "Basic Statistical Methods for Public Health"
+author: "Guy Mizrachi"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+documentclass: book
+github-repo: rstudio/bookdown-demo
+site: bookdown::bookdown_site
+---
+--- 
+title: "Basic Statistical Methods for Public Health"
+author: "Guy Mizrachi"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+documentclass: book
+github-repo: rstudio/bookdown-demo
+site: bookdown::bookdown_site
+---
+
+```{r, eval=FALSE}
+bookdown::render_book(new_session = TRUE, output_format = "HTML")
+```
+
+
+```{r eval=FALSE}
+bookdown::serve_book()
+```
+
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
+
+<!--chapter:end:index.Rmd-->
+
+# Introduction
+
+This is an R bookdown format, which will be used to show examples of answers to questions from the course's book. 
+Using this format is supposed to be intuitive, each 'book' will contain chapters, each chapter is a question.
+
+Using R bookdown will allow us to show the question's data and principles through both explanations and visualization. 
+
+**Good luck!**
+
+Guy. 
+
+<!--chapter:end:01-Introduction.rmd-->
+
+
+# Set A question 1 
+
+Placeholder
+
+
+## Question
+## Answer
+
+<!--chapter:end:02-Set-A-Q1.Rmd-->
+
+# Set A question 3 
+(Page 21)
+
+## Question
+
+"Polio is an infectious disease; for example, it seemed to spread when children went swimming together. The
+NFIP study was not done blind: could that bias the results? Discuss briefly"
+
+## Answer
+
+**Yes**, that could create a bias. 
+A study which was not done blind (meaning: the subjects were chosen, not randomly) could have a number of biases for/against the vaccine. 
+If we were to choose children that engage in activites (like swimming) that increased their chances of getting the virus, it would have been a bias against the vaccine.
+
+
+<!--chapter:end:03-Set-A-Q3.Rmd-->
+
+# Set A Question 4
+(page 21)
+
+## Question 
+
+"The Salk vaccine field trials were conducted only in certain experimental areas (school districts), selected by the Public Health Service in consulatation with local officials. In these areas, there were about 3 million children in grades 1,2 or 3; and there were about 11 millions children in those grades in the U.S. In the experimental areas, the incidence of polio was about 25% higher than in the rest of the country. Did the Salk vaccine field trials cause children to get polio instead of preventing it? "
+
+## Answer
+
+**NO.**
+
+Higher rates of polio can be explained by other factors. The specific districts that were chosen were those with higher risk of polio to begin with, which explains the higher rates of polio in those areas. 
+
+This is a good example of the importance of controlled experiments - factors like higher risk of polio, in an uncontrolled experiment, could've suggested false conclusions. Conducting the experiment in a controlled manner reduces the chance of having those kind of factors. 
+
+<!--chapter:end:04-Set-A-Q4.Rmd-->
+
+# Set A Question 7
+(page 22)
+
+## Question 
+
+"In a clinical trial, data collection usually starts at 'baseline', when the subjects are recruited into the trial but before they are assigned to treatment or control. Data collection continues until the end of followup. Two clinical trials on prevention of heart attacks report baseline data on smoking, shown below. In one of these trials, the randomization did not work. Which one, and why? "
+
+## Answer
+
+Let's see the data first:
+
+```{r echo=FALSE, warning=FALSE}
+library(knitr)
+
+clinical_1 <- matrix(c(1012,'49.3%',997,'69%'), nrow = 2) 
+clinical_1 <- as.table(clinical_1)
+colnames(clinical_1) <-c("Treatment","Control")
+rownames(clinical_1) <- c("Number of people","Percent who smoked")
+
+clinical_2 <- matrix(c(995,'59.3%',1017,'59%'),nrow = 2)
+clinical_2 <- as.table(clinical_2)
+colnames(clinical_2) <-c("Treatment","Control")
+rownames(clinical_2) <- c("Number of people","Percent who smoked")
+
+print(clinical_1)
+
+print(clinical_2)
+```
+As said in the question - the data should show an equal amount of smokers in each group (treatment and control), in order to have an un-biased experiment. 
+As we cann see in the **second** trial - the percent of smokers in each group is similar (59.3% in the treatment group, 59.3% in the control group), but in the **first** trial - there are more smokers (69%) in the control group than in the treatment group (49.3%).
+
+The difference in the first trial can cause a bias - smoking might have an effect on the reaction to the treatment or general condition. A good randomization process will result in groups with similar rates of smokers (like the second trial), but the randomization process of the first trial did not work properly and produced a higher rate of smokers in the control group. 
+
+<!--chapter:end:05-Set-A-Q7.Rmd-->
+
+# Set A Question 8
+(page 22)
+
+## Question 
+
+"Some studies find an association between liver cancer and smoking. However, alcohol consumption is a confounding variable. This means -
+
+1. Alcohol causes liver cancer.
+2. Drinking is associated with smoking, and alcohol causes liver cancer.
+
+Choose one option, and explain."
+
+## Answer
+
+**The second option.**
+
+We learned about **confounding variables** in association with both the cause and the effect we want to test. The confounding variable accounts for some of the effect we test. Drinking is a confounding variable in association to both smoking and cancer - meaning that drinking is associated with smoking, and the effects of drinking (mainly alcohol consumption) cause cancer. 
+
+<!--chapter:end:06-Set-A-Q8.Rmd-->
+
+# Set A Question 12
+(page 23)
+
+## Question 
+
+"Physical exercise is considered to increase the risk of spontaneous abortion. Furthermore, women who have had a spontaneous abortion are more likely to have another. One observational study finds that women who exercise regularly have fewer spontaneous abortions than other women. Can you explain the findings of this study?"
+
+## Answer
+
+Women who exercise regularly may not have had any spontaneous abortion in the past, otherwise - they would not have continued to exercise regularly. This study can be explained by **the selection process** between those women: those who exercise regularly are in good health and did not experience spontaneous abortion until now. 
+
+<!--chapter:end:07-Set-A-Q12.Rmd-->
+
+
+# Set A question 13 
+
+Placeholder
+
+
+## Question
+## Answer
+
+<!--chapter:end:08-Set-A-Q13.Rmd-->
+

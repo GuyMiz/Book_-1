@@ -1,0 +1,14 @@
+# Set A Question 4
+(page 21)
+
+## Question 
+
+"The Salk vaccine field trials were conducted only in certain experimental areas (school districts), selected by the Public Health Service in consulatation with local officials. In these areas, there were about 3 million children in grades 1,2 or 3; and there were about 11 millions children in those grades in the U.S. In the experimental areas, the incidence of polio was about 25% higher than in the rest of the country. Did the Salk vaccine field trials cause children to get polio instead of preventing it? "
+
+## Answer
+
+**NO.**
+
+Higher rates of polio can be explained by other factors. The specific districts that were chosen were those with higher risk of polio to begin with, which explains the higher rates of polio in those areas. 
+
+This is a good example of the importance of controlled experiments - factors like higher risk of polio, in an uncontrolled experiment, could've suggested false conclusions. Conducting the experiment in a controlled manner reduces the chance of having those kind of factors. 

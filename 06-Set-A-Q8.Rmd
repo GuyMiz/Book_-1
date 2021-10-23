@@ -1,0 +1,17 @@
+# Set A Question 8
+(page 22)
+
+## Question 
+
+"Some studies find an association between liver cancer and smoking. However, alcohol consumption is a confounding variable. This means -
+
+1. Alcohol causes liver cancer.
+2. Drinking is associated with smoking, and alcohol causes liver cancer.
+
+Choose one option, and explain."
+
+## Answer
+
+**The second option.**
+
+We learned about **confounding variables** in association with both the cause and the effect we want to test. The confounding variable accounts for some of the effect we test. Drinking is a confounding variable in association to both smoking and cancer - meaning that drinking is associated with smoking, and the effects of drinking (mainly alcohol consumption) cause cancer. 
